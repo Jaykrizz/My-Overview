@@ -1,0 +1,25 @@
+<div class="tabs">
+  <div class="tab-titles">
+    <div *ngFor="let tab of tabs; let i = index" class="tab-title" [class.active]="activeTab === i"
+      (click)="selectTab(i)">
+      {{ tab.title }}
+    </div>
+  </div>
+  <div class="tab-content">
+    <div *ngFor="let tab of tabs; let i = index" [class.active]="activeTab === i">
+      <p>{{ tab.content }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="activeTab === 0" #overviewTab class="tab-panel">
+  <app-overview></app-overview>
+</div>
+
+<div *ngIf="activeTab === 1" #skillsTab class="tab-panel">
+  <app-skills-tab></app-skills-tab>
+</div>
+
+<div *ngIf="activeTab === 2" #skillsTab class="tab-panel">
+  <app-experience></app-experience>
+</div>
