@@ -1,0 +1,40 @@
+.more-page {
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.more-page.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.more-page h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.more-page p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.more-page a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more-page a:hover {
+    text-decoration: underline;
+}

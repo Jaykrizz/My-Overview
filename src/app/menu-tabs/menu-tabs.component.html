@@ -20,6 +20,14 @@
   <app-skills-tab></app-skills-tab>
 </div>
 
-<div *ngIf="activeTab === 2" #skillsTab class="tab-panel">
+<div *ngIf="activeTab === 2" #experienceTab class="tab-panel">
   <app-experience></app-experience>
+</div>
+
+<div *ngIf="activeTab === 3" #projectsDataTab class="tab-panel">
+  <app-projects-data></app-projects-data>
+</div>
+
+<div *ngIf="activeTab === 4" #moreValuesTab class="tab-panel">
+  <app-more-values></app-more-values>
 </div>

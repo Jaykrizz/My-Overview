@@ -1,0 +1,18 @@
+<div class="projects">
+  <p-carousel 
+    [value]="projects" 
+    [numVisible]="1" 
+    [numScroll]="1" 
+    [circular]="true" 
+    [responsiveOptions]="responsiveOptions" 
+    autoplayInterval="4000">
+    
+    <ng-template pTemplate="content" let-project #item>
+      <div class="project-card">
+        <!-- <img [src]="project.image" [alt]="project.title" class="w-full rounded-lg" style="height: 200px; object-fit: cover;" /> -->
+        <h3>{{ project.title }}</h3>
+        <div [innerHTML]="project.description"></div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

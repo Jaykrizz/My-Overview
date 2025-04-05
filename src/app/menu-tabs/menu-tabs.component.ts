@@ -12,25 +12,25 @@ export class MenuTabsComponent implements AfterViewChecked {
 
   @ViewChild('overviewTab') overviewTab: ElementRef | undefined;
   @ViewChild('skillsTab') skillsTab: ElementRef | undefined;
+  @ViewChild('experienceTab') experienceTab: ElementRef | undefined;
+  @ViewChild('projectsDataTab') projectsDataTab: ElementRef | undefined;
+  @ViewChild('moreValuesTab') moreValuesTab: ElementRef | undefined;
 
   tabs = [
     { title: 'Overview', content: 'Content for Overview' },
     { title: 'Skills', content: 'Content for Skills' },
     { title: 'Experience', content: 'Content for Experience' },
     { title: 'Projects', content: 'Content for Projects' },
-    { title: 'About Me', content: 'Content for About Me' },
     { title: 'More', content: 'Content for More' }
   ];
 
   selectTab(index: number) {
     this.activeTab = index;
     this.viewPort = index;
-    console.log(this.activeTab);
   }
 
   ngAfterViewChecked() {
     this.scrollToActiveTab();
-    console.log("testing");
   }
   private scrollToActiveTab() {
     if (this.viewPort === 0 && this.overviewTab) {
@@ -38,9 +38,25 @@ export class MenuTabsComponent implements AfterViewChecked {
         behavior: 'smooth',
         block: 'start',
       });
-      this.viewPort = -1;
     } else if (this.viewPort === 1 && this.skillsTab) {
       this.skillsTab.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    } else if (this.viewPort === 2 && this.experienceTab) {
+      this.experienceTab.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    else if (this.viewPort === 3 && this.projectsDataTab) {
+      this.projectsDataTab.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    else if (this.viewPort === 4 && this.moreValuesTab) {
+      this.moreValuesTab.nativeElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });

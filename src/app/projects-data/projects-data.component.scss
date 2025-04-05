@@ -1,0 +1,38 @@
+.projects .project-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects .project-card h3 {
+  font-size: 24px;
+  margin: 15px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.projects .project-card p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.projects {
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.projects.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
