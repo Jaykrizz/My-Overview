@@ -1,5 +1,4 @@
 .skills-panel {
-    /* background: rgba(255, 255, 255, 0.1); */
     backdrop-filter: blur(4px);
     padding: 20px;
     font-size: 1rem;
@@ -24,16 +23,12 @@
 }
 
 .skill {
-    /* background: rgba(255, 255, 255, 0.1); */
     backdrop-filter: blur(4px);
     padding: 20px;
-    /* font-size: 1rem; */
     border-radius: 10px;
 }
 
 .skill:hover {
     transform: scale(1.2);
-    /* Scale the element */
     transition: transform 0.3s ease;
-    /* Smooth transition */
 }
